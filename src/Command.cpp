@@ -1,7 +1,7 @@
 #include "Command.h"
 
 Command::Command(const String& s) {
-    if (s.startsWith("connect")) {
+    if (s.startsWith("Connect")) {
         type = CONNECT;
     } else if (s.startsWith("StartMonitoring")) {
         type = START_MONITORING;

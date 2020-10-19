@@ -2,14 +2,14 @@
 #define WHITEWATER_TRANSFERPROTOCOL_H
 
 #include <Arduino.h>
-
+#include "Command.h"
 class TransferProtocol {
 public:
 
     class Response {
     public:
         enum ResponseType {
-            GOT, LOST
+            GOT, LOST, REFRESH
         };
 
         explicit Response(const String& s);

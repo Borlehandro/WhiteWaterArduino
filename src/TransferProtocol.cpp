@@ -9,6 +9,8 @@ TransferProtocol::Response::Response(const String& s) {
         type = GOT;
     } else if(s.startsWith("lost")) {
         type = LOST;
+    } else if(Command(s).getType() == Command::CONNECT) {
+        type = REFRESH;
     }
 }
 
